@@ -1,4 +1,4 @@
-Lab 5
+CS147 Final Project
 ====
 
-Lab 5: Putting it together
+todo: write readme for project
