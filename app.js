@@ -42,7 +42,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
-
+/*
 var c = db.tresfit.find();
 	c.forEach(function(err, doc){
 		if(doc == null) return false;
@@ -53,7 +53,7 @@ var c = db.tresfit.find();
 	});
 	console.log("abc");
 
-
+*/
 
 // Add routes here
 app.get('/', index.view);
