@@ -14,6 +14,12 @@ var index = require('./routes/index');
 var stationStarted = require('./routes/station-started');
 var stationFinished = require('./routes/station-finished');
 
+var databaseUrl = "mongodb://admin:admin@ds033069.mongolab.com:33069/heroku_app22105721";
+
+//var databaseUrl = "mongodb://localhost:27017/mydb"
+var collections = ["tresfit", "arrgym"];
+var db = require("mongojs").connect(databaseUrl, collections);
+
 
 var app = express();
 
@@ -37,8 +43,21 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+var c = db.tresfit.find();
+	c.forEach(function(err, doc){
+		if(doc == null) return false;
+		console.log(doc);
+		var asd = doc.name;
+		console.log(asd);
+		string = asd;
+	});
+	console.log("abc");
+
+
+
 // Add routes here
 app.get('/', index.view);
+
 // Example route
 // app.get('/users', user.list);
 app.get('/station-started', stationStarted.markStationAsStarted);

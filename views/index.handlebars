@@ -16,6 +16,7 @@
 <body>
   <h1>Welcome to MyFit</h1>
   <div>
+    <script> document.write(d)</script>
     <div class="w-form">
       <form name="wf-form-change-gymdata" data-name="Change GymData" method="post">
         <select class="w-select gymselect" name="dropdown" required="required">
@@ -46,6 +47,9 @@
         <p>Oops! Something went wrong while submitting the form :(</p>
       </div>
     </div><a class="button" href="#">Search</a>
+    {{#each items}}
+  <p>{{name}}: Occupied: {{occupied}}</p>
+  {{/each}}
     <ul class="machinelist">
       <li class="machine">
         <div class="machinestatus">Bench 1 : Occupied</div>
