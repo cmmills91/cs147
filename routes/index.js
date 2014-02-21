@@ -7,17 +7,25 @@ var db = require("mongojs").connect(databaseUrl, collections);
 
 
 
-exports.view = function(req, res){
+exports.view = function(req, res) {
 	var nm = req.query.name;
+	/*if (typeof nm === 'undefined') {
+		
+	} else if (nm === )*/
+	db.tresfit.find().toArray(function(err, items) {
+        	res.render('index', {'items': items});
+    	});
 	//var cl = req.query.dropdown.value;
-	if(nm == ""){
+	//res.render('index', {'items': db.arrgym.find().toArray()});
+	/*if(nm == "") {
+		res.render('index', {'items': db.arrgym.find().toArray()});
 		db.tresfit.find().toArray(function(err, items) {
-        res.render('index', {'items': items});
-    });
+        	res.render('index', {'items': items});
+    	});
 	}
-	else{	
-	db.tresfit.find({name:nm}).toArray(function(err, items) {
-        res.render('index', {'items': items});
-    });
-	}
+	else {	
+		db.tresfit.find({name:nm}).toArray(function(err, items) {
+        	res.render('index', {'items': items});
+    	});
+	} */
 };
