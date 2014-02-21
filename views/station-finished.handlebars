@@ -2,7 +2,7 @@
 <html data-wf-site="52f3f0612b5f813919000016">
 <head>
   <meta charset="utf-8">
-  <title>CS 147 - Station Finished</title>
+  <title>Station Finished</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/webflow.css">
@@ -16,11 +16,15 @@
 <body>
   <h1>You Have Finished an Exercise!</h1>
   <div>
-    <h3>Station: Bench 1</h3>
-    <h3>Elapsed time: 6m, 36s</h3>
-    <p>Click the "Home" button below to return to the list of available exercises</p><a class="button" href="/">Go Home</a>
+    <h3 id="stationId"></h3>
+    <!-- <h3>Elapsed time: 6m, 36s</h3> -->
+    <p>Click the "Home" button below to return to the list of available exercise machines</p>
+    <a class="button" href="/">Go Home</a>
+    <script type="text/javascript">
+      var url = window.location.href;
+      document.getElementById("stationId").innerHTML = "station: " + url.split('machine=')[1];
+    </script>
   </div>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script type="text/javascript" src="js/webflow.js"></script>
 </body>
 </html>

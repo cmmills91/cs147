@@ -18,8 +18,16 @@
   </div>
   <h1>You Have Started an Exercise!</h1>
   <div>
-    <h3>Station: Bench 1</h3>
-    <p>Make sure to scan the "Finished" QR code after you finish using the station, or click the "Finished" Button Below</p><a class="button" href="/station-finished">Finished!</a>
+    <h3 id="stationId"></h3>
+    <p>Make sure to scan the "Finished" QR code after you finish using the station, or click the "Finished" button below.</p>
+    <a class="button" id='finishButton' href="#">Finished!</a>
+    <script type="text/javascript">
+      var url = window.location.href;
+      var params = url.split('?')[1];
+      var finishURL = "/station-finished?" + params;
+      document.getElementById("finishButton").setAttribute("href", finishURL);
+      document.getElementById("stationId").innerHTML = "station: " + params.split('machine=')[1];
+    </script>
   </div>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </body>
