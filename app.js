@@ -57,7 +57,7 @@ var c = db.tresfit.find();
 	console.log("abc");
 
 */
-
+/*
 var c = db.tresfit.find();
 
 	c.forEach(function(err, doc){
@@ -69,7 +69,7 @@ var c = db.tresfit.find();
 	});
 	console.log("abc");
 	return;
-
+*/
 // Add routes here
 app.get('/', index.view);
 
