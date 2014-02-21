@@ -42,9 +42,13 @@
       </div>
       <input type="submit" id="submitBtn" class="button" value="Search for stations..."></input>
   </form>
-
-    {{#each items}}
-  <p>{{name}}: Occupied: {{occupied}}</p>
+  <table border="1" cellspacing="1" cellpadding="5">
+  <tr class="table_head"> <h3> <td>MACHINE></td> <td>STATUS</td> </h3> </tr>
+  {{#each items}}
+    <tr class="machine_row">
+    <td class="machine_name"> {{name}}</td>
+    <td class="status_disp">{{occupied}}</td>
+    </tr>
   {{/each}}
 
     <ul class="machinelist">
