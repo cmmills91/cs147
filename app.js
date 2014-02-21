@@ -6,7 +6,10 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
-var handlebars = require('express3-handlebars')
+var handlebars = require('express3-handlebars');
+var databaseUrl = "mongodb://admin:admin@ds033069.mongolab.com:33069/heroku_app22105721";
+var collections = ["tresfit", "arrgym"];
+var db = require("mongojs").connect(databaseUrl, collections);
 
 var index = require('./routes/index');
 // Example route
@@ -54,6 +57,18 @@ var c = db.tresfit.find();
 	console.log("abc");
 
 */
+
+var c = db.tresfit.find();
+
+	c.forEach(function(err, doc){
+		if(doc == null) return false;
+		console.log(doc);
+		var asd = doc.name;
+		console.log(asd);
+
+	});
+	console.log("abc");
+	return;
 
 // Add routes here
 app.get('/', index.view);
