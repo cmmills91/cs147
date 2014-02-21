@@ -10,45 +10,43 @@
   <script>
     if (/mobile/i.test(navigator.userAgent)) document.documentElement.className += ' w-mobile';
   </script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="/js/jquery-1.11.0.js"></script>
+  <script type = "text/javascript" src="/js/table.js"></script>
   <link rel="shortcut icon" type="image/x-icon" href="https://y7v4p6k4.ssl.hwcdn.net/placeholder/favicon.ico">
   <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
 </head>
 <body>
   <h1>Welcome to MyFit</h1>
   <div>
-    <div class="w-form">
-      <form name="wf-form-change-gymdata" data-name="Change GymData" method="post">
+    
+      <form name="wf-form-change-gymdata" data-name="Change GymData" method="get" action = "/">
+        <div class="w-form">
         <select class="w-select gymselect" name="dropdown" required="required">
-          <option value="">Select a gym...</option>
-          <option value="First">Tressider Fitness</option>
-          <option value="Second">Arrillaga Gym</option>
-          <option value="Third">Roble Gym</option>
-        </select><a class="button" href="#">Submit</a>
+          <option value="tresfit">Select a gym...</option>
+          <option value="arrgym">Tressider Fitness</option>
+          <option value="arrgym">Arrillaga Gym</option>
+          <option value="">Roble Gym</option>
+        </select><a class="button" href="#" id = "change" type = "submit">Submit</a>
+        </div>
       </form>
-      <div class="w-form-done">
-        <p>Thank you! Your submission has been received!</p>
-      </div>
-      <div class="w-form-fail">
-        <p>Oops! Something went wrong while submitting the form :(</p>
-      </div>
-    </div>
+    
   </div>
   <div>
-    <h4>Available Stations</h4>
-    <div class="w-form">
-      <form name="email-form" data-name="Email Form">
-        <input class="w-input searchbox" type="text" placeholder="Search for stations..." name="search" data-name="Search"></input>
-      </form>
-      <div class="w-form-done">
-        <p>Thank you! Your submission has been received!</p>
+
+<h4>Available Stations</h4>
+<form id="addFriendForm" role="form" method="get" action="/" name="email-form">
+      <div class="w-form">
+        <input type="text" class="w-input searchbox" id="name" placeholder="Name" name="name">
       </div>
-      <div class="w-form-fail">
-        <p>Oops! Something went wrong while submitting the form :(</p>
-      </div>
-    </div><a class="button" href="#">Search</a>
+      <input type="submit" id="submitBtn" class="button" value="Search for stations..."></input>
+  </form>
+
     {{#each items}}
   <p>{{name}}: Occupied: {{occupied}}</p>
   {{/each}}
+
     <ul class="machinelist">
       <li class="machine">
         <div class="machinestatus">Bench 1 : Occupied</div>
@@ -85,6 +83,5 @@
   <div>
     <p>To check in at a machine, please scan the QR code at the machine with your phone.</p>
   </div><a class="helpbutton" href="#">Help</a>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </body>
 </html>
