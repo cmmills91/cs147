@@ -42,47 +42,14 @@
       </div>
       <input type="submit" id="submitBtn" class="button" value="Search for stations..."></input>
   </form>
+  
   <table border="1" cellspacing="1" cellpadding="5">
-  <tr class="table_head"> <h3> <td>MACHINE></td> <td>STATUS</td> </h3> </tr>
+  <tr class="table_head"> <h3> <td>MACHINE</td> <td>STATUS</td> </h3> </tr>
   {{#each items}}
-    <tr class="machine_row">
-    <td class="machine_name"> {{name}}</td>
-    <td class="status_disp">{{occupied}}</td>
-    </tr>
+    <tr><td> {{name}}</td><td>{{occupied}}</td></tr>
   {{/each}}
-</table>
-    <ul class="machinelist">
-      <li class="machine">
-        <div class="machinestatus">Bench 1 : Occupied</div>
-      </li>
-      <li class="machine">
-        <div class="machinestatus">Bench 2 : Occupied</div>
-      </li>
-      <li class="machine">
-        <div class="machinestatus">Bench 3 : Free</div>
-      </li>
-      <li>
-        <div class="machinestatus">Squat 1: Free</div>
-      </li>
-      <li>
-        <div class="machinestatus">Squat 2 : Free</div>
-      </li>
-      <li>
-        <div class="machinestatus">Treadmill 1 : Occupied</div>
-      </li>
-      <li>
-        <div class="machinestatus">Treadmill 2 : Occupied</div>
-      </li>
-      <li>
-        <div class="machinestatus">Treadmill 3 : Occupied</div>
-      </li>
-      <li>
-        <div class="machinestatus">Elliptical 1: Free</div>
-      </li>
-      <li>
-        <div class="machinestatus">Elliptical 2: Occupied</div>
-      </li>
-    </ul>
+  </table>
+    
   </div>
   <div>
     <p>To check in at a machine, please scan the QR code at the machine with your phone.</p>
