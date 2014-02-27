@@ -5,8 +5,6 @@ var databaseUrl = "mongodb://admin:admin@ds033069.mongolab.com:33069/heroku_app2
 var collections = ["tresfit", "arrgym"];
 var db = require("mongojs").connect(databaseUrl, collections);
 
-
-
 exports.view = function(req, res) {
 	var nm = req.query.name;
 	//if (typeof nm === 'undefined') {
