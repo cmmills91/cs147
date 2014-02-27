@@ -12,9 +12,9 @@ exports.markStationAsStarted = function(req, res) {
 	var url_parts = url.parse(req.url, true);
 	var query = url_parts.query;
 	if (query["gym"] === "tresfit") {
-		db.tresfit.update({name:query["machine"]}, {name:query["machine"], occupied:1, time:n})
+		db.tresfit.update({name:query["machine"]}, {name:query["machine"], occupied: 'Occupied', time:n})
 	} else if (query["gym"] === "arrgym") {
-		db.arrgym.update({name:query["machine"]}, {name:query["machine"], occupied:1})
+		db.arrgym.update({name:query["machine"]}, {name:query["machine"], occupied: 'Occupied'})
 	}
 	res.render('station-started', data);
 }
