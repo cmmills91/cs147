@@ -16,6 +16,7 @@ var index = require('./routes/index');
 // var user = require('./routes/user');
 var stationStarted = require('./routes/station-started');
 var stationFinished = require('./routes/station-finished');
+var gym = require('./routes/gym');
 
 var databaseUrl = "mongodb://admin:admin@ds033069.mongolab.com:33069/heroku_app22105721";
 
@@ -77,6 +78,7 @@ app.get('/', index.view);
 // app.get('/users', user.list);
 app.get('/station-started', stationStarted.markStationAsStarted);
 app.get('/station-finished', stationFinished.markStationAsFinished);
+app.get('/gym/:id', gym.gymInfo);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
