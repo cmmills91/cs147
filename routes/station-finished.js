@@ -20,11 +20,19 @@ exports.markStationAsFinished = function(req, res) {
 			var changed = n-oldtime;
 			minutes = Math.floor(changed/60);
 			seconds = Math.floor(changed%60);
-			db.tresfit.update({name:query["machine"]}, {name:query["machine"], occupied: 'Available', time:n})
+			db.tresfit.update({name:query["machine"]}, {$set:{occupied: 'Available', time:n}})
 			res.render('station-finished', {'min': minutes, 'sec':seconds});
 		});
 	} else if (query["gym"] === "arrgym") {
-		db.arrgym.update({name:query["machine"]}, {name:query["machine"], occupied:'Available'})
+		db.arrgym.find({name:query["machine"]}).toArray(function(err, items){
+			var oldtime = items[0].time;
+			var changed = n-oldtime;
+			minutes = Math.floor(changed/60);
+			seconds = Math.floor(changed%60);
+			db.arrgym.update({name:query["machine"]}, {$set:{occupied: 'Available', time:n}})
+			res.render('station-finished', {'min': minutes, 'sec':seconds});
+		});
 	}
+
 	
 }
