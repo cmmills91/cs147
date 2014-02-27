@@ -1,4 +1,4 @@
-var data = require("../data.json");
+//var data = require("../data.json");
 var databaseUrl = "mongodb://admin:admin@ds033069.mongolab.com:33069/heroku_app22105721";
 
 var collections = ["tresfit", "arrgym"];
@@ -16,5 +16,5 @@ exports.markStationAsStarted = function(req, res) {
 	} else if (query["gym"] === "arrgym") {
 		db.arrgym.update({name:query["machine"]}, {name:query["machine"], occupied: 'Occupied'})
 	}
-	res.render('station-started', data);
+	res.render('station-started');
 }

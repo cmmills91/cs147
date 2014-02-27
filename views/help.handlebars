@@ -1,34 +1,65 @@
 <!DOCTYPE html>
-<html data-wf-site="52f3f0612b5f813919000016">
+<!-- This site was created in Webflow. http://www.webflow.com-->
+<!-- Last Published: Thu Feb 27 2014 21:02:46 GMT+0000 (UTC) -->
+<html data-wf-site="530cf02f7f0fd48f37000220">
 <head>
   <meta charset="utf-8">
-  <title>Station Finished</title>
+  <title>Help!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/webflow.css">
-  <link rel="stylesheet" type="text/css" href="css/cs-147.webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/gymscheduler.webflow.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Montserrat:400,700"]
+      }
+    });
+  </script>
   <script>
     if (/mobile/i.test(navigator.userAgent)) document.documentElement.className += ' w-mobile';
   </script>
   <link rel="shortcut icon" type="image/x-icon" href="https://y7v4p6k4.ssl.hwcdn.net/placeholder/favicon.ico">
   <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
 </head>
-<body>
-  <h1>The Help Page</h1>
-  <div>
-    <h3 id="stationId"></h3>
-    <!-- <h3>Elapsed time: 6m, 36s</h3> -->
-    <p><h4>Click back to return to the machine availability list</h4></p>
-    <a class="button" href="/">Back</a>
-    <p><h5>So what does this app do?</h5></p>
-    <li><h6>MyFit is an application that allows people to see the availability status of different machines at their local gym. We know everybody's time is precious, so our goal is to help people spend less time waiting and more time doing what they want to!</h6></li>
-    <p><h5>What's up with the QR codes?</h5></p>
-    <li><h6>The app runs off of check-ins at machines via QR code scans. When someone is about to use a machine, they simply scan the 'start' QR code with their phone's camera and the website does the rest. When you're done, scan the 'finished' QR code and we reflect the change in the database. It's that easy.</h6></li>
-    <p><h5>Where is the QR app on my phone?</h5></p>
-    <li><h6>Though QR codes are everywhere nowadays, in order to scan and use them you still need to download a QR scanner application. These applications are available for free in both App Store and GooglePlay. Just decide which developers advertisements you want to look at</h6></li>
-    <p><h5>What if I forget to sign out?</h5></p>
-    <li><h6>No big deal! Though we do strongly encourage our users to sign out by scanning the 'finished' QR code, we know that the post-workout high can be distracting. Rest assured, our system will periodically sweep for machines that appear to be latent in usage. That said, be a friend and sign out when you're done!</h6></li>
+<body><a class="button otherbutton" href="/">go home</a>
+  <div class="header">waitlifter</div>
+  <div class="information">help!</div>
+  <div class="w-slider slider" data-animation="slide" data-duration="1000" data-infinite="1">
+    <div class="w-slider-mask">
+      <div class="w-slide">
+        <div class="helpheader">So what does this app do?</div>
+        <div class="instructions">MyFit is an application that allows people to see the availability status of different machines at their local gym. We know everybody's time is precious, so our goal is to help people spend less time waiting and more time doing what they want
+          to!</div>
+      </div>
+      <div class="w-slide">
+        <div class="helpheader">What's up with the QR codes?</div>
+        <div class="instructions">The app runs off of check-ins at machines via QR code scans. When someone is about to use a machine, they simply scan the 'start' QR code with their phone's camera and the website does the rest. When you're done, scan the 'finished' QR code and
+          we reflect the change in the database. It's that easy.</div>
+      </div>
+      <div class="w-slide slider">
+        <div class="helpheader">Where is the QR&nbsp;app on my phone?</div>
+        <div class="instructions">Though QR codes are everywhere nowadays, in order to scan and use them you still need to download a QR scanner application. These applications are available for free in both the App Store and GooglePlay.</div>
+        <div class="w-embed instructions">Any will work, but here's one for your convenience:
+          <br><a href="https://itunes.apple.com/us/app/qr-reader-for-iphone/id368494609?mt=8&amp;uo=4" target="itunes_store">iOS</a>
+          &nbsp;&nbsp;
+          <a href="https://play.google.com/store/apps/details?id=uk.tapmedia.qrreader&amp;hl=en">Android</a>
+        </div>
+      </div>
+      <div class="w-slide">
+        <div class="helpheader">What if I forget to sign out at a machine?</div>
+        <div class="instructions helpinfo">No big deal! Though we do strongly encourage our users to sign out by scanning the 'finished' QR code, we know that the post-workout high can be distracting. Rest assured, our system will periodically sweep for machines that appear to be latent
+          in usage. That said, be a friend and sign out when you're done!</div>
+      </div>
+    </div>
+    <div class="w-slider-arrow-left"></div>
+    <div class="w-slider-arrow-right"></div>
+    <div class="w-slider-nav w-round"></div>
   </div>
+  <div class="instructions">Click the "go home" button above to return to the list of available exercise machines!</div>
+  <img class="icon" src="images/Sports-Dumbbell-icon.png" alt="530fa16800a59e9c14000077_Sports-Dumbbell-icon.png">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/webflow.js"></script>
 </body>
 </html>

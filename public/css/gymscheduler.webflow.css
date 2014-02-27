@@ -1,0 +1,243 @@
+body {
+  overflow-x: visible;
+  overflow-y: visible;
+  background-color: #c2c2c2;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  font-size: 16px;
+  line-height: 20px;
+}
+h1 {
+  margin: 10px 0px;
+  font-size: 38px;
+  line-height: 44px;
+  font-weight: 700;
+}
+h2 {
+  margin: 10px 0px;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 700;
+}
+h3 {
+  margin: 10px 0px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+h4 {
+  margin: 10px 0px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+h5 {
+  margin: 10px 0px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+h6 {
+  margin: 10px 0px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+}
+p {
+  margin-bottom: 5px;
+}
+.button {
+  position: static;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: block;
+  width: auto;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 4px 15px;
+  background-color: #8a8a8a;
+  font-family: Montserrat, sans-serif;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+.button.otherbutton {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: auto;
+  bottom: auto;
+  width: 97px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.button.otherbutton.onebutton {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: auto;
+}
+.button.finishedbutton {
+  width: 110px;
+}
+.header {
+  margin-top: 20px;
+  padding-top: 3px;
+  font-family: Montserrat, sans-serif;
+  color: #1cffc6;
+  font-size: 42px;
+  line-height: 55px;
+  font-weight: 400;
+  text-align: center;
+}
+.instructions {
+  display: block;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: Montserrat, sans-serif;
+  color: white;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+}
+.formfield {
+  position: static;
+  display: block;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0px;
+  padding-left: 0px;
+  float: none;
+  clear: none;
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+}
+.information {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: Montserrat, sans-serif;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+.help {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: auto;
+  display: block;
+  width: 80px;
+  margin-right: auto;
+  float: none;
+}
+.helpheader {
+  display: block;
+  width: 90%;
+  margin-top: 22px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: Montserrat, sans-serif;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+.slider {
+  position: relative;
+  display: inline-block;
+  overflow-x: visible;
+  overflow-y: visible;
+  width: 100%;
+  height: auto;
+  margin-top: 8px;
+  background-color: #8a8a8a;
+}
+.floatinglist {
+  display: block;
+  overflow-x: auto;
+  overflow-y: auto;
+  width: 75%;
+  height: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  float: none;
+  clear: none;
+}
+.available {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-style: solid;
+  border-width: 1px 2px;
+  border-color: #157813;
+  background-color: #69ff7a;
+  font-family: Montserrat, sans-serif;
+  color: #333;
+  text-align: center;
+}
+.occupied {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-style: solid;
+  border-width: 1px 2px;
+  border-color: #9c1616;
+  background-color: #f06767;
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+}
+.empty {
+  margin-top: 10px;
+  margin-bottom: 14px;
+}
+.icon {
+  display: block;
+  width: 50px;
+  margin: 10px auto 17px;
+}
+.machinelist {
+  display: block;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.buttonsdiv {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+}
+@media (max-width: 991px) {
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 479px) {
+  .instructions.helpinfo {
+    margin-right: 20px;
+    margin-left: 20px;
+    color: white;
+    font-size: 14px;
+  }
+  .formfield {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .helpheader {
+    margin-top: 22px;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: Montserrat, sans-serif;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+  }
+}

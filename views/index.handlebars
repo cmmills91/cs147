@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html data-wf-site="52f3f0612b5f813919000016">
+<html data-wf-site="530cf02f7f0fd48f37000220">
 <head>
   <meta charset="utf-8">
-  <title>Gym Scheduler</title>
+  <title>gymscheduler</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/webflow.css">
-  <link rel="stylesheet" type="text/css" href="css/cs-147.webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/gymscheduler.webflow.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Montserrat:400,700"]
+      }
+    });
+  </script>
   <script>
     if (/mobile/i.test(navigator.userAgent)) document.documentElement.className += ' w-mobile';
   </script>
@@ -18,44 +26,36 @@
   <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
 </head>
 <body>
-  <h1>Welcome to MyFit</h1>
-  <div>
-    <p>To check in at a machine, please scan the QR code at the machine with your phone.</p>
+  <div class="header">
+    <div>waitlifter</div>
   </div>
-  <div>
-    <form name="wf-form-change-gymdata" data-name="Change GymData" method="get" action = "/">
-      <div class="w-form">
-      <select class="w-select gymselect" name="dropdown" required="required" id="gymselect">
-        <!--<option value="tresfit">Select a gym...</option>-->
-        <option value="tresfit">Tressider Fitness</option>
+  <div class="instructions">To check in at a machine, please scan the QR&nbsp;code at your station with your phone’s QR&nbsp;code reader.</div>
+  <div class="w-embed instructions">Don't have a QR code reader? Download one!
+    <br><a href="https://itunes.apple.com/us/app/qr-reader-for-iphone/id368494609?mt=8&amp;uo=4" target="itunes_store">iOS</a>
+    &nbsp;&nbsp;
+    <a href="https://play.google.com/store/apps/details?id=uk.tapmedia.qrreader&amp;hl=en">Android</a>
+  </div>
+  <div class="w-form">
+    <form name="email-form" data-name="Email Form">
+      <label class="instructions" for="name">s e l e c t &nbsp; a &nbsp; g y m :</label>
+      <select class="w-select formfield" name="dropdown" id="gymselect">
+        <option value="tresfit">Tresidder Fitness</option>
         <option value="arrgym">Arrillaga Gym</option>
       </select>
-      </div>
     </form>
   </div>
-  <div>
-    <h4>Available Stations</h4>
-    <form id="addFriendForm" role="form" method="get" action="/" name="email-form">
-      <div class="w-form">
-        <input type="text" class="w-input searchbox" id="name" placeholder="Search blank query to display all" name="name">
-      </div>
-      <input type="submit" id="submitBtn" class="button" value="Search for stations..."></input>
-    </form>    
-    <!-- <table border="1" cellspacing="1" cellpadding="5">
-      <td>MACHINE</td> <td>STATUS</td> </tr>
-      {{#each items}}
-        <tr><td> {{name}}</td><td>{{occupied}}</td></tr>
-        <p>{{name}} space {{occupied}} </p>
-      {{/each}}
-    </table> -->
-    <ul class="machinelist" id="list">
-      {{#each items}}
-        <li class="machine">
-          <div class="machinestatus">{{name}} : {{occupied}}</div>
-        </li>
-      {{/each}}
-    </ul>
+  <div class="w-form">
+    <form name="email-form" data-name="Email Form">
+      <label class="instructions" for="name">s e a r c h &nbsp; f o r &nbsp; a &nbsp; s t a t i o n :</label>
+      <input class="w-input formfield" type="text" placeholder="e.g. bench, elliptical, etc." id="name" name="field"></input>
+      <input class="w-button button" type="submit" id="submitBtn" value="search" data-wait="Searching for stations..."></input>
+    </form>
   </div>
-  <a class="helpbutton" href="/help">Help</a>
+  <div class="information">m a c h i n e &nbsp; a v a i l a b i l i t y</div><br/>
+  <ul class="w-list-unstyled machinelist" id="list">
+  </ul>
+  <img class="icon" src="images/Sports-Dumbbell-icon.png" width="50" alt="530fa16800a59e9c14000077_Sports-Dumbbell-icon.png"><a class="button help" href="/help" target="_blank">help!</a>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/webflow.js"></script>
 </body>
 </html>
