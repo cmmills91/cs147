@@ -41,14 +41,21 @@
       </div>
       <input type="submit" id="submitBtn" class="button" value="Search for stations..."></input>
     </form>    
-    <ul class="machinelist" id="list">
+    <table border="1" cellspacing="1" cellpadding="5">
+      <td>MACHINE</td> <td>STATUS</td> </tr>
+      {{#each items}}
+        <tr><td> {{name}}</td><td>{{occupied}}</td></tr>
+        <p>{{name}} space {{occupied}} </p>
+      {{/each}}
+    </table>
+    <!-- <ul class="machinelist" id="list">
       {{#each items}}
         <li class="machine">
           <div class="machinestatus">{{name}} : {{occupied}}</div>
         </li>
       {{/each}}
-    </ul>
+    </ul> -->
   </div>
-  <a class="helpbutton" href="#">Help</a>
+  <a class="helpbutton" href="/help">Help</a>
 </body>
 </html>
