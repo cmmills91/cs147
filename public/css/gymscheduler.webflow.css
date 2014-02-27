@@ -156,7 +156,7 @@ p {
   overflow-x: visible;
   overflow-y: visible;
   width: 100%;
-  height: auto;
+  height: 200px;
   margin-top: 8px;
   background-color: #8a8a8a;
 }
