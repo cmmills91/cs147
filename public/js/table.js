@@ -7,10 +7,26 @@ $(document).ready(function() {
 function initializePage() {
 	$('#gymselect').change(function() {
 		var selectedGym = $('#gymselect').val();
-		var url = "/gym/" + selectedGym;
+		var search = $('#name').val();
+		if(search == ""){
+			search = "all";
+		} 
+		var url = "/gym/" + selectedGym +"?search="+search;
 		$.get(url, callbackFn);
 	});
-	$.get("/gym/tresfit", callbackFn);
+
+	$('#addFriendForm').submit(function(e){
+
+		var selectedGym = $('#gymselect').val();
+		var search = $('#name').val();
+		if(search == ""){
+			search = "all";
+		} 
+		var url = "/gym/" + selectedGym +"?search="+search;
+		$.get(url, callbackFn);
+		return false;
+	});
+	$.get("/gym/tresfit?search=all", callbackFn);
 }
 
 function callbackFn(result) {
