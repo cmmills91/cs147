@@ -5,7 +5,8 @@ var db = require("mongojs").connect(databaseUrl, collections);
 
 exports.gymInfo = function(req, res) {
 	var gymID = req.params.id;
-	var search = req.query.search;
+	var src = req.query.search;
+	var search = src.toLowerCase();
 	if(search == "all"){
 		if (gymID == "tresfit") {
 			db.tresfit.find().toArray(function(err, items) {
