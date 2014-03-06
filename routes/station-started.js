@@ -17,4 +17,8 @@ exports.markStationAsStarted = function(req, res) {
 		db.arrgym.update({name:query["machine"]}, {$set:{occupied: 'Occupied', time:n}})
 	}
 	res.render('station-started');
-}
+};
+
+$('#help').on('click', function() {
+  ga('send', 'event', 'button', 'click');
+});
